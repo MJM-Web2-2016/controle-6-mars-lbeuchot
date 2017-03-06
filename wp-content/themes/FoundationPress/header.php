@@ -49,6 +49,15 @@
 				<?php endif; ?>
 			</div>
 		</nav>
+
+		<div style="text-align: center; margin-top: 50px;">
+			<button class="hollow button" href="#">Project</button>
+			<button class="hollow button" href="#">Add Creative Fields</button>
+			<button class="hollow button" href="#">Most Appreciated</button>
+			<button class="hollow button" href="#">Worldwilde</button>
+		</center>
+
+
 	</header>
 
 	<section class="container">
