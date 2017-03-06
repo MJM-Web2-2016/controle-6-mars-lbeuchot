@@ -15,14 +15,20 @@ add_image_size( 'featured-small', 640, 200, true ); // name, width, height, crop
 add_image_size( 'featured-medium', 1280, 400, true );
 add_image_size( 'featured-large', 1440, 400, true );
 add_image_size( 'featured-xlarge', 1920, 400, true );
+
+
+add_theme_support( ‘post-thumbnails’ );
 add_image_size( 'visuel-listing', 450, 450, true );
+add_image_size( 'visuel-listing', 450, 450, true );
+
 
 // Add additional image sizes
 add_image_size( 'fp-small', 640 );
 add_image_size( 'fp-medium', 1024 );
 add_image_size( 'fp-large', 1200 );
 add_image_size( 'fp-xlarge', 1920 );
-add_image_size( 'vl-list', 450, 450, true );
+
+
 
 // Register the new image sizes for use in the add media modal in wp-admin
 function foundationpress_custom_sizes( $sizes ) {

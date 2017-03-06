@@ -15,19 +15,21 @@
 
 get_header(); ?>
 
-<div id="page" role="main">
+<div id="page-full-width" role="main">
 	<article class="main-content">
-	<?php if ( have_posts() ) : ?>
 
-		<?php /* Start the Loop */ ?>
-		<?php while ( have_posts() ) : the_post(); ?>
-			<?php get_template_part( 'template-parts/content', get_post_format() ); ?>
-		<?php endwhile; ?>
+		<?php if ( have_posts() ) : ?>
 
-		<?php else : ?>
-			<?php get_template_part( 'template-parts/content', 'none' ); ?>
+		<div class="row small-up-1 medium-up-3 large-up-6">
+				<?php while ( have_posts() ) : the_post(); ?>
+					<?php get_template_part( 'template-parts/content', get_post_format() ); ?>
+				<?php endwhile; ?>
 
-		<?php endif; // End have_posts() check. ?>
+			<?php else : ?>
+				<?php get_template_part( 'template-parts/content', 'none' ); ?>
+
+			<?php endif; // End have_posts() check. ?>
+		</div>
 
 		<?php /* Display navigation to next/previous pages when applicable */ ?>
 		<?php
@@ -42,7 +44,6 @@ get_header(); ?>
 		<?php endif; ?>
 
 	</article>
-	<?php get_sidebar(); ?>
 
 </div>
 
